@@ -14,7 +14,7 @@ const App = () => {
   return(
     <div style={{ display: 'flex', flexDirection: 'column'}}>
       <button onClick={getNewPuppy}>show  me a puppy</button>
-      <img src={dogSrc} style={{objectFit: 'contain'}}/>
+      <img src={dogSrc} style={{objectFit: 'contain'}} alt="foo" />
     </div>
   )
 }
