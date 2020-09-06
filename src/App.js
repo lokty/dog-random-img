@@ -11,10 +11,18 @@ const App = () => {
         setDogSrc(result.data.message)
       })
   }
+  const DogImg = () => {
+    if (!dogSrc) {
+      return null
+    }
+    return (
+      <img src={dogSrc} style={{objectFit: 'contain'}} alt="foo" />
+    )
+  } 
   return(
     <div style={{ display: 'flex', flexDirection: 'column'}}>
       <button onClick={getNewPuppy}>show  me a puppy</button>
-      <img src={dogSrc} style={{objectFit: 'contain'}} alt="foo" />
+      <DogImg />
     </div>
   )
 }
